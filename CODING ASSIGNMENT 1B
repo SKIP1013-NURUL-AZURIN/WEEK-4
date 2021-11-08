@@ -13,23 +13,23 @@ class Assignment1B {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		//ask user number of items
+		//user input number of items
 		System.out.println("Enter the number of items : ");
 		ItemsNum = sc.nextInt();
 		
-		//ask the price of first item and the quantity
+		//user input the price of first item and the quantity
 		System.out.println("Enter price of first item : RM ");
 		price1 = sc.nextDouble();
 		System.out.println("Enter quantity of first item : ");
 		qtt1 = sc.nextInt();
 		
-		//ask the price of second item and the quantity
+		//user input the price of second item and the quantity
 		System.out.println("Enter price of second item : RM ");
 		price2 = sc.nextDouble();
 		System.out.println("Enter quantity of second item : ");
 		qtt2 = sc.nextInt();
 		
-		//ask the price of third item and the quantity
+		//user input the price of third item and the quantity
 		System.out.println("Enter price of third item : RM ");
 		price3 = sc.nextDouble();
 		System.out.println("Enter quantity of third item : ");
@@ -43,21 +43,17 @@ class Assignment1B {
 		if (totalPrice >100)
 		{
 			discount = totalPrice * 0.2;
-			System.out.println("Discount received = RM " + discount);
-			paid = totalPrice - discount;
-			System.out.println("Price to be paid = RM " + paid);
+			System.out.printf("Discount received : RM %.2f", discount);
 		}
-		
-		if (totalPrice <100)
+		else
 		{
 			discount = totalPrice * 0.1;
-			System.out.println("Discount received = RM " + discount);
-			paid = totalPrice - discount;
-			System.out.println("Price to be paid = RM " + paid);
+			System.out.printf("Discount received : RM %.2f", discount);
 		}
 		
-		
-
+		//the amount that customer needs to be paid.
+		paid = totalPrice-discount;
+		System.out.printf("\nPrice to be paid  : RM %.2f", paid);
 	}
 
 }
