@@ -1,0 +1,63 @@
+package myScanner;
+import java.util.Scanner;
+class Assignment1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int ItemsNum;
+		double price1, price2, price3;
+		int qtt1, qtt2, qtt3;
+		double totalPrice;
+		double discount;
+		double paid;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		//ask user number of items
+		System.out.println("Enter the number of items : ");
+		ItemsNum = sc.nextInt();
+		
+		//ask the price of first item and the quantity
+		System.out.println("Enter price of first item : RM ");
+		price1 = sc.nextDouble();
+		System.out.println("Enter quantity of first item : ");
+		qtt1 = sc.nextInt();
+		
+		//ask the price of second item and the quantity
+		System.out.println("Enter price of second item : RM ");
+		price2 = sc.nextDouble();
+		System.out.println("Enter quantity of second item : ");
+		qtt2 = sc.nextInt();
+		
+		//ask the price of third item and the quantity
+		System.out.println("Enter price of third item : RM ");
+		price3 = sc.nextDouble();
+		System.out.println("Enter quantity of third item : ");
+		qtt3 = sc.nextInt();
+		
+		//calculate total price (original price)
+		totalPrice = (price1*qtt1) + (price2*qtt2) + (price3*qtt3);
+		System.out.println("Total price : RM " + totalPrice);
+		
+		//calculate discount for the customer base on total price
+		if (totalPrice >100)
+		{
+			discount = totalPrice * 0.2;
+			System.out.println("Discount received = RM " + discount);
+			paid = totalPrice - discount;
+			System.out.println("Price to be paid = RM " + paid);
+		}
+		
+		if (totalPrice <100)
+		{
+			discount = totalPrice * 0.1;
+			System.out.println("Discount received = RM " + discount);
+			paid = totalPrice - discount;
+			System.out.println("Price to be paid = RM " + paid);
+		}
+		
+		
+
+	}
+
+}
