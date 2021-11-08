@@ -11,20 +11,22 @@ class Assignment1A {
 		double sum;
 		double total;
 		
+		//scanner declaration to user input
 		Scanner sc = new Scanner(System.in);
 		
+		//user input the yearly interest
 		System.out.println("Enter the yearly interest rate : ");
 		interestRate = sc.nextDouble();
 		
-		
+		//user input the number of years to loan
 		System.out.println("Enter the number of year : ");
 		years = sc.nextInt();
 		
-		
+		//user input the amount of loan
 		System.out.println("Enter the loan amount : ");
 		loan = sc.nextDouble();
 		
-		
+		//calculate the sum of interest,monthly payment and total
 		sum = ((interestRate / 100) * loan) * years;
 		monthlyPayment = (interestRate / 100) * loan;
 		total = monthlyPayment * (12 * years);
